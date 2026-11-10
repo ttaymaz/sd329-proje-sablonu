@@ -1,0 +1,7 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <!-- Alanınızın kalbi: kayıtlar (record), servisler, arayüzler, olaylar.
+       Dosyaya, konsola ya da başka bir teknolojiye bağımlı DEĞİLDİR.
+       Ortak ayarlar (hedef çerçeve, nullable...) Directory.Build.props içinde. -->
+
+</Project>

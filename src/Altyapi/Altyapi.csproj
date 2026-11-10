@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <!-- Çekirdeğin arayüzlerini gerçek dünyaya bağlar: dosya, saat, ağ...
+       Çekirdeğe başvurur; çekirdek bu projeye BAŞVURMAZ. -->
+
+  <ItemGroup>
+    <ProjectReference Include="..\Cekirdek\Cekirdek.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="10.0.14" />
+    <PackageReference Include="Microsoft.Extensions.Options" Version="10.0.14" />
+  </ItemGroup>
+
+</Project>

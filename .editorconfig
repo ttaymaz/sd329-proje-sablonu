@@ -1,0 +1,19 @@
+root = true
+
+[*.cs]
+indent_style = space
+indent_size = 4
+charset = utf-8
+
+# Çözümleyici kuralları Directory.Build.props'ta "latest-recommended" ile
+# açık. Aşağıdakiler bilerek kapatıldı; gerisi açık kalır ve uyarı verir.
+
+# CA1848 / CA1873: günlükleme için LoggerMessage kaynak üreteci önerisi.
+# Yüksek hacimli servislerde başarım için önemlidir; bu ölçekte gereksiz.
+dotnet_diagnostic.CA1848.severity = none
+dotnet_diagnostic.CA1873.severity = none
+
+[tests/**.cs]
+# CA1707: test adlarındaki alt çizgiler. Test adları cümle olarak
+# yazılır (Bos_yigindan_cikarmak_istisna_firlatir); bu bir gelenektir.
+dotnet_diagnostic.CA1707.severity = none

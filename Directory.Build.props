@@ -1,0 +1,12 @@
+<Project>
+  <!-- Bütün projelerin ortak ayarları. Bir projeye özgü ayar o projenin
+       .csproj dosyasına yazılır. -->
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <!-- Çözümleyiciler varsayılandan daha fazla kuralı denetler
+         (kültür, kaynak yönetimi...). Uyarıları okuyun. -->
+    <AnalysisLevel>latest-recommended</AnalysisLevel>
+  </PropertyGroup>
+</Project>
