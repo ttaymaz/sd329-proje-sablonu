@@ -15,6 +15,16 @@ var builder = Host.CreateApplicationBuilder(new HostApplicationBuilderSettings
     ContentRootPath = AppContext.BaseDirectory,
 });
 
+// Kap kurulurken bağımlılık grafını doğrula: kayıtsız bağımlılık ya da
+// tekil bir servise verilen kapsamlı servis, program çalışırken değil
+// açılırken hata versin. (Host bunu kendiliğinden yalnızca Development
+// ortamında yapar.)
+builder.ConfigureContainer(new DefaultServiceProviderFactory(new ServiceProviderOptions
+{
+    ValidateScopes = true,
+    ValidateOnBuild = true,
+}));
+
 builder.Logging.ClearProviders();
 builder.Logging.AddSimpleConsole(o => o.SingleLine = true);
 
