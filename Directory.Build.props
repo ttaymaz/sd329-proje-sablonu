@@ -8,5 +8,8 @@
     <!-- Çözümleyiciler varsayılandan daha fazla kuralı denetler
          (kültür, kaynak yönetimi...). Uyarıları okuyun. -->
     <AnalysisLevel>latest-recommended</AnalysisLevel>
+    <!-- Bilgisayarda .NET 10 çalışma zamanı yoksa (yalnızca daha yeni bir
+         sürüm kuruluysa) uygulama ve testler o sürümde çalışsın. -->
+    <RollForward>Major</RollForward>
   </PropertyGroup>
 </Project>

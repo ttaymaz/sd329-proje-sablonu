@@ -4,4 +4,12 @@
        Dosyaya, konsola ya da başka bir teknolojiye bağımlı DEĞİLDİR.
        Ortak ayarlar (hedef çerçeve, nullable...) Directory.Build.props içinde. -->
 
+  <!-- Servisleriniz ILogger<T> ve IOptions<T> kullanır; burada yalnızca
+       soyutlamaları gerekir. Gerçek günlükçü ve yapılandırma Uygulama'da
+       (Generic Host) bağlanır. -->
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="10.0.14" />
+    <PackageReference Include="Microsoft.Extensions.Options" Version="10.0.14" />
+  </ItemGroup>
+
 </Project>
